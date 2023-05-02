@@ -1,4 +1,4 @@
-# mysite
+# Django Example Project
 
 This package provides an example Django project which is based upon the official tutorial at https://docs.djangoproject.com/en/3.2/intro/tutorial01/.
 
