@@ -11,6 +11,7 @@ class ChoiceInline(admin.TabularInline):
     extra = 3
 
 
+@admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['question_text']}),
@@ -29,6 +30,3 @@ class QuestionAdmin(admin.ModelAdmin):
     def was_published_recently(self):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
-
-
-admin.site.register(Question, QuestionAdmin)
